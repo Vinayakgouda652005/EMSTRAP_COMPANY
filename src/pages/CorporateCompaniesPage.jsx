@@ -6,7 +6,7 @@ const PAGE_CSS = ".hero-gradient-overlay {\n            background: linear-gradi
 
 export default function CorporateCompaniesPage() {
   usePageSetup({
-    title: "A Safer Workplace Starts With Faster Response. | EMSTRAP Solutions",
+    title: "EMSTRAP | AI- Powered Emergency Response Ecosystem",
     bodyClass: "bg-white text-slate-900 font-sans selection:bg-brandBlue selection:text-white antialiased",
     themeClass: "theme-solutions",
     customCss: PAGE_CSS,
