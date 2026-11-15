@@ -18,3 +18,4 @@ View your app in AI Studio: https://ai.studio/apps/e79c4a89-f403-4c1d-9962-d772d
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+"# EMSTRAP_COMPANY" 
