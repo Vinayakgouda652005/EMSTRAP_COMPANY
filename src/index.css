@@ -694,7 +694,7 @@
 
 /* Parallax Scrims */
 .parallax-bg-connect {
-  background-image: linear-gradient(180deg, rgba(5, 11, 20, 0.88) 0%, rgba(5, 11, 20, 0.72) 40%, rgba(5, 11, 20, 0.96) 100%), url('/police-control.jpg');
+  background-image: linear-gradient(180deg, rgba(5, 11, 20, 0.88) 0%, rgba(5, 11, 20, 0.72) 40%, rgba(5, 11, 20, 0.96) 100%), url('/images/police-control.jpg');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;

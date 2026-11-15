@@ -26,6 +26,157 @@ const RoadmapPage = lazy(() => import("./pages/RoadmapPage"));
 const LaunchPage = lazy(() => import("./pages/LaunchPage"));
 const ServiceDetailsPage = lazy(() => import("./pages/ServiceDetailsPage"));
 
+
+function SEOManager() {
+  const { pathname } = useLocation();
+
+  const pageSEO = {
+    "/": {
+      title: "EMSTRAP | AI-Powered Emergency Response Ecosystem",
+      description: "EMSTRAP connects citizens, ambulance fleets, hospitals, police and emergency services through an intelligent emergency response ecosystem."
+    },
+    "/about": {
+      title: "About EMSTRAP | Our Mission and Vision",
+      description: "Learn about EMSTRAP, our mission, vision and technology for building a smarter emergency response ecosystem."
+    },
+    "/careers": {
+      title: "Careers at EMSTRAP | Join Our Team",
+      description: "Explore career and internship opportunities at EMSTRAP and help build technology for faster emergency response."
+    },
+    "/contact": {
+      title: "Contact EMSTRAP | Get in Touch",
+      description: "Contact EMSTRAP for partnerships, product enquiries, collaborations and emergency response technology solutions."
+    },
+    "/connect": {
+      title: "EMSTRAP Connect | Smart Emergency Communication",
+      description: "EMSTRAP Connect supports emergency communication and coordination between smart cities, police and emergency response teams."
+    },
+    "/ride": {
+      title: "EMSTRAP Ride | Ambulance Booking Platform",
+      description: "EMSTRAP Ride connects people with ambulance transportation services for coordinated emergency patient transport."
+    },
+    "/shield": {
+      title: "EMSTRAP Shield | Enterprise Safety Platform",
+      description: "EMSTRAP Shield helps organisations strengthen workplace safety through employee SOS alerts and emergency coordination."
+    },
+    "/command": {
+      title: "EMSTRAP Command | Emergency Operations Platform",
+      description: "EMSTRAP Command supports ambulance providers and hospitals with emergency operations and response coordination."
+    },
+    "/corporate-companies": {
+      title: "EMSTRAP for Corporate Companies | Workplace Safety",
+      description: "Discover EMSTRAP emergency response and workplace safety solutions for corporate organisations."
+    },
+    "/hospitals-and-clinics": {
+      title: "EMSTRAP for Hospitals and Clinics",
+      description: "Explore EMSTRAP solutions for hospital emergency coordination and ambulance pre-arrival communication."
+    },
+    "/educational-campuses": {
+      title: "EMSTRAP for Educational Campuses | Campus Safety",
+      description: "Discover emergency alert and response coordination solutions for educational institutions and campuses."
+    },
+    "/smart-cities": {
+      title: "EMSTRAP for Smart Cities | Emergency Coordination",
+      description: "Explore intelligent emergency communication and coordination solutions for smart city ecosystems."
+    },
+    "/government-agencies": {
+      title: "EMSTRAP for Government Agencies",
+      description: "Discover EMSTRAP emergency coordination technology for government departments and public services."
+    },
+    "/ambulance-providers": {
+      title: "EMSTRAP for Ambulance Providers",
+      description: "Explore technology for ambulance fleet coordination, emergency requests and patient transportation."
+    },
+    "/traffic-management": {
+      title: "EMSTRAP Traffic Management | Emergency Response",
+      description: "Discover how EMSTRAP supports traffic coordination and emergency response route prioritisation."
+    },
+    "/police-departments": {
+      title: "EMSTRAP for Police Departments",
+      description: "Explore emergency communication and incident coordination solutions for police departments."
+    },
+    "/research": {
+      title: "EMSTRAP Research | Emergency Response Innovation",
+      description: "Explore EMSTRAP research and innovation in AI-powered emergency response technology."
+    },
+    "/prototype": {
+      title: "EMSTRAP Prototype | Emergency Technology",
+      description: "Learn about EMSTRAP prototypes and technology concepts for intelligent emergency detection and response."
+    },
+    "/patent": {
+      title: "EMSTRAP Patent | Innovation and Technology",
+      description: "Discover EMSTRAP's patented innovation and technology development in emergency response."
+    },
+    "/pilots": {
+      title: "EMSTRAP Pilot Programmes | Emergency Response",
+      description: "Learn about EMSTRAP pilot programmes and opportunities to implement emergency response solutions."
+    },
+    "/roadmap": {
+      title: "EMSTRAP Roadmap | Product Development",
+      description: "Explore the EMSTRAP product roadmap and future direction of its emergency response ecosystem."
+    },
+    "/launch": {
+      title: "EMSTRAP Launch | Bringing Emergency Technology to Market",
+      description: "Discover EMSTRAP's launch journey and plans for bringing intelligent emergency response solutions to market."
+    },
+    "/service-details": {
+      title: "EMSTRAP Services | Emergency Response Solutions",
+      description: "Explore EMSTRAP services and technology solutions for emergency communication and response coordination."
+    }
+  };
+
+  useEffect(() => {
+    const cleanPath = pathname
+  .replace(/\.html$/, "")
+  .replace(/\/$/, "") || "/";
+    const seo = pageSEO[cleanPath] || pageSEO["/"];
+
+    document.title = seo.title;
+
+    const setMeta = (selector, attribute, value, createTag) => {
+      let element = document.head.querySelector(selector);
+
+      if (!element) {
+        element = document.createElement("meta");
+        Object.entries(createTag).forEach(([key, val]) => {
+          element.setAttribute(key, val);
+        });
+        document.head.appendChild(element);
+      }
+
+      element.setAttribute(attribute, value);
+    };
+
+    setMeta('meta[name="description"]', "content", seo.description, {
+      name: "description"
+    });
+
+    setMeta('meta[property="og:title"]', "content", seo.title, {
+      property: "og:title"
+    });
+
+    setMeta('meta[property="og:description"]', "content", seo.description, {
+      property: "og:description"
+    });
+
+    setMeta('meta[property="og:url"]', "content", `https://www.emstrap.com${cleanPath}`, {
+      property: "og:url"
+    });
+
+    let canonical = document.head.querySelector('link[rel="canonical"]');
+
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.setAttribute("rel", "canonical");
+      document.head.appendChild(canonical);
+    }
+
+    canonical.setAttribute("href", `https://www.emstrap.com${cleanPath === "/" ? "/" : cleanPath}`);
+  }, [pathname]);
+
+  return null;
+}
+
 function ScrollManager() {
   const { pathname, hash } = useLocation();
 
@@ -142,6 +293,7 @@ function AppRoutes() {
 export default function App() {
   return (
     <BrowserRouter>
+      <SEOManager />
       <ScrollManager />
       <AppRoutes />
     </BrowserRouter>
