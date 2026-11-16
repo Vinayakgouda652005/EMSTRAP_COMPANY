@@ -665,7 +665,7 @@ export default function CareersPage() {
 
                         <div className="role-info">
 
-                            <h3>Backend Developer</h3>
+                            <h3>Cyber Security Intern </h3>
 
                             <div className="role-meta">
                                 <span>Full-time</span>
@@ -936,9 +936,7 @@ export default function CareersPage() {
                     Instagram
                 </a>
 
-                <Link to="/contact">
-                    Partnerships
-                </Link>
+               
 
             </div>
 
