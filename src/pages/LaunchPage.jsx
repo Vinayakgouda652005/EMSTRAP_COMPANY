@@ -83,7 +83,7 @@ export default function LaunchPage() {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
             <Link to="/" className="flex items-center space-x-3 group">
                 <div className="h-10 flex items-center transition-transform duration-300 group-hover:scale-105">
-                    <img src="/logo.png" alt="EMSTRAP Logo" className="h-full w-auto object-contain" />
+                    <img src="/images/logo.png" alt="EMSTRAP Logo" className="h-full w-auto object-contain" />
                 </div>
                 <div className="flex flex-col">
                     <span className="text-xl font-bold font-display tracking-wider text-white">EMSTRAP</span>

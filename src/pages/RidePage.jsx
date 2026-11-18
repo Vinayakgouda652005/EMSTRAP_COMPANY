@@ -256,7 +256,7 @@ export default function RidePage() {
         <section className="max-w-4xl mx-auto px-6 md:px-8 -mt-6 md:-mt-10 relative z-20" id="section-02-service-card">
             <div className="p-8 sm:p-10 rounded-3xl bg-white border border-slate-200/90 shadow-xl space-y-6 text-left">
                 <div className="flex items-center gap-3">
-                    <img src="/logo.png" alt="Logo" className="h-8 w-auto" />
+                    <img src="/images/logo.png" alt="Logo" className="h-8 w-auto" />
                     <span className="text-sm font-black font-display tracking-widest text-slate-900 uppercase">EMSTRAP</span>
                 </div>
                 
@@ -1516,7 +1516,7 @@ export default function RidePage() {
                             <div className="absolute inset-0 -m-6 sm:-m-8 rounded-full border-2 border-red-500/15 heartbeat-ring-2 pointer-events-none"></div>
 
                             <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white text-slate-900 flex flex-col items-center justify-center text-center p-2 shadow-2xl border-4 border-emergencyRed heartbeat-center">
-                                <img src="/logo.png" alt="EMSTRAP Logo" className="h-6 sm:h-7 w-auto object-contain" />
+                                <img src="/images/logo.png" alt="EMSTRAP Logo" className="h-6 sm:h-7 w-auto object-contain" />
                                 <span className="text-xs sm:text-sm font-black font-display text-emergencyRed uppercase tracking-wider mt-1">Ride</span>
                             </div>
                             <span className="inline-flex items-center gap-1 text-[8px] sm:text-[9px] font-mono font-bold text-red-700 bg-white/95 px-2.5 py-0.5 rounded-full border border-red-200 shadow-sm mt-2">
@@ -1656,7 +1656,7 @@ export default function RidePage() {
 
                 <div className="relative z-10 max-w-xl space-y-6 text-left">
                     <div className="flex items-center gap-2">
-                        <img src="/logo.png" alt="EMSTRAP Logo" className="h-6 w-auto" />
+                        <img src="/images/logo.png" alt="EMSTRAP Logo" className="h-6 w-auto" />
                         <span className="text-xs font-mono font-bold uppercase tracking-widest text-slate-300">EMSTRAP RIDE</span>
                     </div>
 

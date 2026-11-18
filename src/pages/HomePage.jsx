@@ -2089,7 +2089,7 @@ export default function HomePage() {
     {/* Logo Lightbox Modal */}
     <div id="logoLightbox" className="hidden fixed inset-0 z-[200] items-center justify-center bg-black/90 backdrop-blur-md cursor-pointer" onClick={closeLogoLightbox}>
         <div className="relative flex flex-col items-center gap-5 animate-scale-in" onClick={(e) => e.stopPropagation()}>
-            <img src="/logo.png" alt="EMSTRAP Logo" className="max-w-[70vw] max-h-[70vh] object-contain drop-shadow-2xl" />
+            <img src="/images/logo.png" alt="EMSTRAP Logo" className="max-w-[70vw] max-h-[70vh] object-contain drop-shadow-2xl" />
             <p className="text-xs text-slate-500 tracking-widest uppercase">Click outside to close</p>
             <button onClick={closeLogoLightbox} className="absolute -top-4 -right-4 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 border border-white/10 flex items-center justify-center text-white transition-all cursor-pointer">
                 <i className="fa-solid fa-xmark text-sm"></i>

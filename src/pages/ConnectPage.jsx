@@ -1443,7 +1443,7 @@ export default function ConnectPage() {
                         <div className="absolute inset-0 -m-3 sm:-m-4 rounded-full border-2 border-brandBlue/30 heartbeat-ring-1 pointer-events-none"></div>
                         <div className="absolute inset-0 -m-6 sm:-m-8 rounded-full border-2 border-brandBlue/15 heartbeat-ring-2 pointer-events-none"></div>
                         <div className="w-20 h-20 sm:w-28 sm:h-28 rounded-full bg-white text-slate-900 flex flex-col items-center justify-center p-2 text-center shadow-2xl border-4 border-brandBlue heartbeat-center">
-                            <img src="/logo.png" alt="EMSTRAP Logo" className="w-11 sm:w-16 h-auto object-contain" />
+                            <img src="/images/logo.png" alt="EMSTRAP Logo" className="w-11 sm:w-16 h-auto object-contain" />
                             <span className="text-[7px] sm:text-[9px] font-black font-display uppercase tracking-wider text-brandBlue mt-0.5 leading-none">CONNECT</span>
                         </div>
                     </div>
