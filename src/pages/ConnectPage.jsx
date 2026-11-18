@@ -1301,7 +1301,7 @@ export default function ConnectPage() {
                     {/* Central Hub: Emergency Control Center / EMSTRAP CONNECT */}
                     <div className="relative z-20 w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-full bg-white text-slate-900 border-4 border-brandBlue flex flex-col items-center justify-center p-2 sm:p-3 text-center node-pulse shadow-2xl">
                         <div className="flex items-center justify-center gap-1 sm:gap-1.5">
-                            <img src="/logo.png" alt="EMSTRAP Logo" className="h-4 sm:h-6 md:h-7 w-auto object-contain" />
+                            <img src="/images/logo.png" alt="EMSTRAP Logo" className="h-4 sm:h-6 md:h-7 w-auto object-contain" />
                             <span className="text-xs sm:text-base md:text-lg font-black font-display text-brandBlue lowercase tracking-tight">connect</span>
                         </div>
                         <span className="text-[7px] sm:text-[9px] uppercase tracking-wider text-slate-400 font-mono mt-0.5 sm:mt-1 font-semibold">Control Center</span>
