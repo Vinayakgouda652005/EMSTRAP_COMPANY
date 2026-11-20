@@ -540,7 +540,7 @@ export default function RidePage() {
                                 
                                 <div className="flex items-center gap-4">
                                     <div className="w-16 h-16 rounded-xl overflow-hidden bg-slate-100 shrink-0 border border-slate-100 shadow-sm">
-                                        <img src="/images/ride-audience-patient.png" alt="Patients" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
+                                        <img src="/images/ride-audience-caregiver.png" alt="Patients" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
                                     </div>
                                     <div>
                                         <h3 className="text-base font-bold font-display text-slate-900 group-hover:text-brandBlue transition-colors">Patients</h3>
